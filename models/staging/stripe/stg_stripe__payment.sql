@@ -6,4 +6,4 @@ SELECT
     amount / 100.0 AS amount_usd,
     created::date AS created_at,
     _batched_at
-FROM raw.stripe.payment
+FROM {{ source('stripe', 'payment') }}
