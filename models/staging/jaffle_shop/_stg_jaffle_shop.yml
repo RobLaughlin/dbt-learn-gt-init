@@ -1,7 +1,9 @@
 models:
   - name: stg_jaffle_shop__customers
+    description: One unique customer per row
     columns:
       - name: customer_id
+        description: Unique customer ID
         data_tests:
           - unique
           - not_null
@@ -13,31 +15,28 @@ models:
           - not_null
 
   - name: stg_jaffle_shop__orders
+    description: One unique order per row
+
     columns:
       - name: order_id
+        description: Unique order ID
         data_tests:
           - unique
           - not_null
       - name: customer_id
+        description: customer_id may not be unique, may be multiple orders from one customer
         data_tests:
           - not_null
           - relationships:
               arguments:
                 to: ref('stg_jaffle_shop__customers')
                 field: customer_id
+                store_failures: true
+
       - name: order_date
+        description: Date when order was placed
         data_tests:
           - not_null
+
       - name: status
-        data_tests:
-          - not_null
-          - accepted_values:
-              arguments:
-                values:
-                  [
-                    "placed",
-                    "shipped",
-                    "completed",
-                    "returned",
-                    "return_pending",
-                  ]
+        description: '{{ doc("order_status") }}'

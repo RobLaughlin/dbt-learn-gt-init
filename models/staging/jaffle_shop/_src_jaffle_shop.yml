@@ -1,10 +1,21 @@
 sources:
   - name: jaffle_shop
+    description: A clone of a Postgres database
     database: raw
-    schema: jaffle_shop
     tables:
-      - name: customers
       - name: orders
+        columns:
+          - name: id
+            data_type: number
+          - name: user_id
+            data_type: number
+          - name: order_date
+            data_type: date
+          - name: status
+            data_type: varchar
+          - name: _etl_loaded_at
+            data_type: timestamp_ntz
+
         # config:
         # freshness:
         #   warn_after:
@@ -14,3 +25,12 @@ sources:
         #     count: 48
         #     period: hour
         # loaded_at_field: _etl_loaded_at
+
+      - name: customers
+        columns:
+          - name: id
+            data_type: number
+          - name: first_name
+            data_type: varchar
+          - name: last_name
+            data_type: varchar

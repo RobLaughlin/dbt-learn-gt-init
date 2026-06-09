@@ -1,0 +1,6 @@
+order_status,definition
+placed,Order placed
+shipped,Order shipped
+completed,Order completed
+returned,Order returned
+return_pending,Return pending on order

@@ -1,0 +1,11 @@
+seeds:
+  - name: jaffle_shop_order_statuses
+    description: Valid Jaffle Shop order statuses
+    columns:
+      - name: order_status
+        tests:
+          - unique
+          - not_null
+      - name: definition
+        tests:
+          - not_null

@@ -1,0 +1,21 @@
+seeds:
+  - name: stripe_payment_methods
+    description: Valid Stripe payment method reference values.
+    columns:
+      - name: payment_method
+        tests:
+          - unique
+          - not_null
+      - name: definition
+        tests:
+          - not_null
+  - name: stripe_payment_statuses
+    description: Valid Stripe payment statuses
+    columns:
+      - name: payment_status
+        tests:
+          - unique
+          - not_null
+      - name: definition
+        tests:
+          - not_null

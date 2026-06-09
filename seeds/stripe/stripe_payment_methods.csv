@@ -1,0 +1,5 @@
+payment_method,definition
+gift_card,Payment made using a gift card
+bank_transfer,Payment made using a bank transfer
+credit_card,Payment made using a credit card
+coupon,Payment made using a coupon
