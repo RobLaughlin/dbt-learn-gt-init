@@ -1,9 +1,9 @@
 SELECT
-    id::NUMBER AS payment_id,
-    orderid::NUMBER AS order_id,
-    paymentmethod::VARCHAR AS payment_method,
-    status::VARCHAR AS status,
-    (amount / 100.0)::NUMBER AS amount_usd,
-    created::DATE AS created_at,
-    _batched_at::TIMESTAMP AS _batched_at
+    CAST(id AS INT64) AS payment_id,
+    CAST(orderid AS INT64) AS order_id,
+    CAST(paymentmethod AS STRING) AS payment_method,
+    CAST(status AS STRING) AS status,
+    CAST(amount / 100.0 AS NUMERIC) AS amount_usd,
+    CAST(created AS DATE) AS created_at,
+    CAST(_batched_at AS TIMESTAMP) AS _batched_at
 FROM {{ source('stripe', 'payment') }}

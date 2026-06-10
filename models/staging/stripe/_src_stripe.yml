@@ -1,7 +1,7 @@
 sources:
   - name: stripe
     description: Raw Stripe payments
-    database: raw
+    database: dbt-tutorial
     tables:
       - name: payment
         columns:

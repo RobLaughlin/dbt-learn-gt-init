@@ -42,3 +42,10 @@ models:
 
       - name: status
         description: '{{ doc("order_status") }}'
+
+data_tests:
+  - name: assert_stg_jaffle_shop__orders_no_invalid_order_statuses
+    description: "Warn if there are any invalid order statuses"
+    config:
+      severity: warn
+      store_failures: true
