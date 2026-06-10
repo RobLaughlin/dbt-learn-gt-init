@@ -1,3 +1,4 @@
+
 SELECT
     CAST(id AS INT64) AS customer_id,
     CAST(first_name AS STRING) AS first_name,

@@ -9,3 +9,19 @@ seeds:
       - name: definition
         tests:
           - not_null
+
+  - name: jaffle_shop_employees
+    description: Jaffle shop employees
+    columns:
+      - name: employee_id
+        tests:
+          - unique
+          - not_null
+      - name: customer_id
+        tests:
+          - unique
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('stg_jaffle_shop__customers')
+                field: customer_id

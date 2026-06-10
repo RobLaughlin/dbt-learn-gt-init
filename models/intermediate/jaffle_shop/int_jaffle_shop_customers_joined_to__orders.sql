@@ -24,6 +24,9 @@ customer_orders AS (
     GROUP BY customer_id
 ),
 
+employees as (
+    SELECT * FROM {{ref('jaffle_shop_employees')}}
+),
 
 final AS (
 
@@ -35,11 +38,14 @@ final AS (
         customer_orders.most_recent_order_date,
         coalesce(customer_orders.number_of_orders, 0) AS number_of_orders,
         coalesce(customer_orders.lifetime_value_usd, 0.0) AS lifetime_value_usd,
+        employees.employee_id
     FROM customers
 
     LEFT JOIN
         customer_orders
         ON customers.customer_id = customer_orders.customer_id
+    
+    LEFT JOIN employees ON employees.customer_id = customers.customer_id
 
 )
 
