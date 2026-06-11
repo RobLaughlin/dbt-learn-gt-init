@@ -1,0 +1,4 @@
+{
+  "dbt.dbtPythonPathOverride": "/home/rjlwebdev/anaconda3/bin/python3",
+  "dbt.dbtIntegration": "fusion"
+}
