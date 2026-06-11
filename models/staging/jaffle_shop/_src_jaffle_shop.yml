@@ -1,7 +1,7 @@
 sources:
-  - name: jaffle_shop
+  - name: raw_jaffle_shop
     description: A clone of a Postgres database
-    database: dbt-tutorial
+    database: dbt-learn-499019
     tables:
       - name: orders
         columns:

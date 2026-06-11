@@ -6,4 +6,4 @@ SELECT
     CAST(amount / 100.0 AS NUMERIC) AS amount_usd,
     CAST(created AS DATE) AS created_at,
     CAST(_batched_at AS TIMESTAMP) AS _batched_at
-FROM {{ source('stripe', 'payment') }}
+FROM {{ source('raw_stripe', 'payment') }}
