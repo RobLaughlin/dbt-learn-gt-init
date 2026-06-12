@@ -1,5 +1,5 @@
 WITH orders AS (
-    SELECT order_id, customer_id, status FROM {{ ref("stg_jaffle_shop__orders") }}
+    SELECT order_id, customer_id, order_date, status FROM {{ ref("stg_jaffle_shop__orders") }}
 ),
 
 payment AS (
@@ -10,6 +10,7 @@ final AS (
     SELECT 
         orders.order_id,
         orders.customer_id,
+        orders.order_date,
         payment.amount_usd,
     FROM orders
     LEFT JOIN payment ON orders.order_id = payment.order_id
