@@ -8,4 +8,4 @@ final AS (
     WHERE status = 'success'
 )
 
-SELECT total_revenue FROM final
+SELECT total_revenue_usd FROM final
