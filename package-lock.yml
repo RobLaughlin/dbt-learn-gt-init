@@ -2,13 +2,16 @@ packages:
 - package: dbt-labs/codegen
   name: codegen
   version: 0.14.1
+- package: brooklyn-data/dbt_artifacts
+  name: dbt_artifacts
+  version: 2.10.1
 - package: godatadriven/dbt_date
   name: dbt_date
-  version: 0.18.0
+  version: 0.19.0
 - package: metaplane/dbt_expectations
   name: dbt_expectations
   version: 0.10.10
 - package: dbt-labs/dbt_utils
   name: dbt_utils
   version: 1.3.3
-sha1_hash: d04f87e551246d35299ac11c1246ee0d4f100814
+sha1_hash: c8f5e9dc3f25bf9fff3ba019f61a2a1ec257bdb8
