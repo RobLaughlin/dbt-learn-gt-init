@@ -5,6 +5,9 @@ packages:
 - package: brooklyn-data/dbt_artifacts
   name: dbt_artifacts
   version: 2.10.1
+- package: bqbooster/dbt_bigquery_monitoring
+  name: dbt_bigquery_monitoring
+  version: 0.26.1
 - package: godatadriven/dbt_date
   name: dbt_date
   version: 0.19.0
@@ -14,4 +17,4 @@ packages:
 - package: dbt-labs/dbt_utils
   name: dbt_utils
   version: 1.3.3
-sha1_hash: c8f5e9dc3f25bf9fff3ba019f61a2a1ec257bdb8
+sha1_hash: c5aa570f5f5c3a8144b403e87694822ec11d7417
